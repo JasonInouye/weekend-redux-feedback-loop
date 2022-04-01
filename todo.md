@@ -2,10 +2,13 @@
 
 ### database name: prime_feedback
 
-- [ ] create database prime_feedback
-    - [ ] create tables and starting data supplied in data.sql file
+- [X] create database prime_feedback
+    - [X] create tables and starting data supplied in data.sql file
 
 - [ ] update index.js with static REDUX setup
+    - [ ] add boiler plate imports
+    - [ ] create reduxStore variable
+    - [ ] update ReactDom.render
 
 - [ ] Reducers needed in index.js
     - [ ] feeling reducer
