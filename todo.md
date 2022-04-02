@@ -18,19 +18,20 @@
     - [X] understanding reducer
     - [X] supported reducer
     - [X] comments reducer
-    - [ ] review reducer
+    - [X] review reducer
+    - [ ] CLEAR_ALL reducers
 
 - [ ] create component with wire frame for each page
     - [X] feeling component
     - [X] understanding component
     - [X] supported component
     - [X] comments component
-    - [ ] review component
-    - [ ] submit feedback component
-        - [ ] axios POST
+    - [X] review component
+    - [X] submit feedback component
+        - [X] axios POST
 
-- [ ] add a POST router to modules
-    - [ ] update server.js with POST router
+- [X] add a POST router to modules
+    - [X] update server.js with POST router
 
 - [ ] add validation logic to all inputs
     - [ ] comments does not need validation
