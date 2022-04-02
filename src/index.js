@@ -11,12 +11,20 @@ import logger from 'redux-logger';
 
 // REDUCERS
 const feelingReducer = (state = '', action) => {
-    if (action.type === 'SET_FEELING') {
-        console.log( 'inside of SET_FEELING', action.payload);
-        return action.payload
+    if ( action.type === 'SET_FEELING' ){
+        //console.log( 'inside of SET_FEELING', action.payload);
+        return action.payload;
     }
     return state;
 };
+
+const underReducer = ( state = '', action ) => {
+    if ( action.type === 'SET_UNDER' ){
+        console.log( 'inside of SET_UNDER', action.payload );
+        return action.payload;
+    }
+    return state;
+}
 
 // STORE
 // reducers are comma delimited 
@@ -24,6 +32,7 @@ const feelingReducer = (state = '', action) => {
 const reduxStore = createStore(
     combineReducers({
         feelingReducer,
+        underReducer,
     }),
     applyMiddleware(logger)
 )

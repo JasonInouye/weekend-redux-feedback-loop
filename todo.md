@@ -21,7 +21,7 @@
     - [ ] review reducer
 
 - [ ] create component with wire frame for each page
-    - [ ] feeling component
+    - [X] feeling component
     - [ ] understanding component
     - [ ] supported component
     - [ ] comments component
