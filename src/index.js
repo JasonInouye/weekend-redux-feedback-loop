@@ -14,6 +14,8 @@ const feelingReducer = (state = '', action) => {
     if ( action.type === 'SET_FEELING' ){
         //console.log( 'inside of SET_FEELING', action.payload);
         return action.payload;
+    } else if ( action.type === 'CLEAR_FEEDBACK_DATA'){
+        return '';
     }
     return state;
 };
@@ -22,6 +24,8 @@ const underReducer = ( state = '', action ) => {
     if ( action.type === 'SET_UNDER' ){
         console.log( 'inside of SET_UNDER', action.payload );
         return action.payload;
+    } else if ( action.type === 'CLEAR_FEEDBACK_DATA'){
+        return '';
     }
     return state;
 };
@@ -30,6 +34,8 @@ const supportReducer = ( state = '', action ) => {
     if ( action.type === 'SET_SUPPORT' ){
         console.log( 'inside of SET_SUPPORT', action.payload );
         return action.payload;
+    } else if ( action.type === 'CLEAR_FEEDBACK_DATA'){
+        return '';
     }
     return state;
 }
@@ -38,6 +44,8 @@ const commentReducer = ( state = '', action ) => {
     if ( action.type === 'SET_COMMENT' ){
         console.log( 'inside of SET_COMMENT', action.payload );
         return action.payload;
+    } else if ( action.type === 'CLEAR_FEEDBACK_DATA'){
+        return '';
     }
     return state;
 }

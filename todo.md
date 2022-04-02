@@ -13,15 +13,15 @@
     - [X] create reduxStore variable
     - [X] update ReactDom.render and Provider/Store prop
 
-- [ ] Reducers needed in index.js
+- [X] Reducers needed in index.js
     - [X] feeling reducer
     - [X] understanding reducer
     - [X] supported reducer
     - [X] comments reducer
     - [X] review reducer
-    - [ ] CLEAR_ALL reducers
+    - [X] CLEAR_ALL reducers
 
-- [ ] create component with wire frame for each page
+- [X] create component with wire frame for each page
     - [X] feeling component
     - [X] understanding component
     - [X] supported component
