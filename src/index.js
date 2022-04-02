@@ -24,6 +24,14 @@ const underReducer = ( state = '', action ) => {
         return action.payload;
     }
     return state;
+};
+
+const supportReducer = ( state = '', action ) => {
+    if ( action.type === 'SET_SUPPORT' ){
+        console.log( 'inside of SET_SUPPORT', action.payload );
+        return action.payload;
+    }
+    return state;
 }
 
 // STORE
@@ -33,6 +41,7 @@ const reduxStore = createStore(
     combineReducers({
         feelingReducer,
         underReducer,
+        supportReducer,
     }),
     applyMiddleware(logger)
 )
