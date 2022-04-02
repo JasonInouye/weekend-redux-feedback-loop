@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function underComponent () {
-    console.log( 'inside of underComponent' );
+    //console.log( 'inside of underComponent' );
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -16,7 +16,6 @@ function underComponent () {
         setUnder('');
     }
 
-    
     return (
         <form onSubmit={handleUnder}>
             <p>How well are you understanding the talent?</p>
