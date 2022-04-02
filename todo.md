@@ -33,7 +33,8 @@
 - [X] add a POST router to modules
     - [X] update server.js with POST router
 
-- [ ] add validation logic to all inputs
+- [ ] change inputs to radio buttons
+    - [ ] add validation logic to all inputs
     - [ ] comments does not need validation
 
 - [ ] add navigation routers
