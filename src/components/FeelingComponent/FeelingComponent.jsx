@@ -19,19 +19,17 @@ function FeelingComponent() {
     };
 
     return (
-        <div>
-            <form onSubmit={handleFeeling}>
-                <p>How are you feeling today?</p>
-                <input
-                    required
-                    placeholder='Feeling'
-                    value={feeling}
-                    type="text"
-                    onChange={(event) => setFeeling(event.target.value)}
-                />
-                <button type="submit">Next</button>
-            </form>
-        </div>
+        <form onSubmit={handleFeeling}>
+            <p>How are you feeling today?</p>
+            <input
+                required
+                placeholder = "Feeling"
+                value = {feeling}
+                type = "text"
+                onChange = {(event) => setFeeling(event.target.value)}
+            />
+            <button type = "submit">Next</button>
+        </form>
     )
 }
 

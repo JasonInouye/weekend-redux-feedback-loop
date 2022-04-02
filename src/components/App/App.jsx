@@ -4,6 +4,7 @@ import './App.css';
 
 //COMPONENTS
 import FeelingComponent from '../FeelingComponent/FeelingComponent';
+import UnderComponent from '../UnderComponent/UnderComponent';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <FeelingComponent />
+      <UnderComponent />
     </div>
   );
 }
