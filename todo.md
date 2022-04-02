@@ -5,13 +5,16 @@
 - [X] create database prime_feedback
     - [X] create tables and starting data supplied in data.sql file
 
+- [X] npm install redux@4 react-redux@7
+- [X] npm install redux-logger
+
 - [X] update index.js with static REDUX setup
     - [X] add boiler plate imports
     - [X] create reduxStore variable
     - [X] update ReactDom.render and Provider/Store prop
 
 - [ ] Reducers needed in index.js
-    - [ ] feeling reducer
+    - [X] feeling reducer
     - [ ] understanding reducer
     - [ ] supported reducer
     - [ ] comments reducer

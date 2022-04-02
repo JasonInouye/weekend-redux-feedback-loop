@@ -5,17 +5,25 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
 // REDUX Imports
-import { createStore, combineReducers, applyMiddleware } from redux;
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider }from 'react-redux';
 import logger from 'redux-logger';
 
 // REDUCERS
+const feelingReducer = (state = '', action) => {
+    if (action.type === 'SET_FEELING') {
+        return action.payload
+    }
+    return state;
+};
 
 // STORE
 // reducers are comma delimited 
 // add logger middleware to store as well
 const reduxStore = createStore(
-    combineReducers({}),
+    combineReducers({
+        feelingReducer,
+    }),
     applyMiddleware(logger)
 )
 
