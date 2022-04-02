@@ -12,6 +12,7 @@ import logger from 'redux-logger';
 // REDUCERS
 const feelingReducer = (state = '', action) => {
     if (action.type === 'SET_FEELING') {
+        console.log( 'inside of SET_FEELING', action.payload);
         return action.payload
     }
     return state;

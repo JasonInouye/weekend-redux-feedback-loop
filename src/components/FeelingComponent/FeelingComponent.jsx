@@ -5,15 +5,18 @@ import { useHistory } from 'react-router-dom';
 
 
 function FeelingComponent() {
-    console.log('inside of FeelingComponent');
+    //console.log('inside of FeelingComponent');
 
     const history = useHistory();
     const dispatch = useDispatch();
     const [feeling, setFeeling] = useState('');
 
-    const handleFeeling = () => {
-        console.log( 'CLICKED' );
-    }
+    const handleFeeling = (event) => {
+        event.preventDefault();
+        console.log( 'Does this get logged' );
+        dispatch({ type: 'SET_FEELING', payload: feeling });
+        setFeeling('');
+    };
 
     return (
         <div>
