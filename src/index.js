@@ -34,6 +34,14 @@ const supportReducer = ( state = '', action ) => {
     return state;
 }
 
+const commentReducer = ( state = '', action ) => {
+    if ( action.type === 'SET_COMMENT' ){
+        console.log( 'inside of SET_COMMENT', action.payload );
+        return action.payload;
+    }
+    return state;
+}
+
 // STORE
 // reducers are comma delimited 
 // add logger middleware to store as well
@@ -42,6 +50,7 @@ const reduxStore = createStore(
         feelingReducer,
         underReducer,
         supportReducer,
+        commentReducer,
     }),
     applyMiddleware(logger)
 )

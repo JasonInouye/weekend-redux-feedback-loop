@@ -16,14 +16,14 @@
 - [ ] Reducers needed in index.js
     - [X] feeling reducer
     - [X] understanding reducer
-    - [ ] supported reducer
+    - [X] supported reducer
     - [ ] comments reducer
     - [ ] review reducer
 
 - [ ] create component with wire frame for each page
     - [X] feeling component
     - [X] understanding component
-    - [ ] supported component
+    - [X] supported component
     - [ ] comments component
     - [ ] review component
     - [ ] submit feedback component
