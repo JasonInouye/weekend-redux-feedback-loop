@@ -1,9 +1,9 @@
-import axios from 'react';
+import axios from 'axios';
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 
 function reviewFeedback () {
-    console.log( 'inside of reveiewFeedback' );
+    console.log( 'inside of reviewFeedback' );
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -15,7 +15,20 @@ function reviewFeedback () {
     const comment = useSelector( store => store.commentReducer );
 
     const handleSubmit = () => {
-        console.log( 'inside of handleSubmit' );
+        console.log( 'inside of handleSubmit', feeling, under, support, comment );
+
+        axios.post('/api/feedback', {
+            feeling: feeling,
+            understanding: under,
+            support: support,
+            comments: comment
+        }).then( response => {
+            console.log( 'feedback submitted' );
+        }).catch( err => {
+            console.log( err );
+        })
+        // clear feedback data from store after sending to database
+        //dispatch({ type: 'CLEAR_FEEDBACK_DATA' });
     }
 
     return (
