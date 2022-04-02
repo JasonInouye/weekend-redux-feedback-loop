@@ -5,6 +5,7 @@ import './App.css';
 //COMPONENTS
 import FeelingComponent from '../FeelingComponent/FeelingComponent';
 import UnderComponent from '../UnderComponent/UnderComponent';
+import SupportComponent from '../SupportComponent/SupportComponent';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       </header>
       <FeelingComponent />
       <UnderComponent />
+      <SupportComponent />
     </div>
   );
 }

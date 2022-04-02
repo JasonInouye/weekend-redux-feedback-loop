@@ -12,7 +12,7 @@ function underComponent () {
     const handleUnder = (event) => {
         event.preventDefault();
         console.log( 'inside of handleUnder' );
-        dispatch ({ type: 'SET_UNDER', payload: under})
+        dispatch({ type: 'SET_UNDER', payload: under})
         setUnder('');
     }
 
