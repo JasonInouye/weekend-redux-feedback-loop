@@ -7,6 +7,7 @@ import FeelingComponent from '../FeelingComponent/FeelingComponent';
 import UnderComponent from '../UnderComponent/UnderComponent';
 import SupportComponent from '../SupportComponent/SupportComponent';
 import CommentComponent from '../CommentComponent/CommentComponent';
+import ReviewComponent from '../ReviewComponent/ReviewComponent';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <UnderComponent />
       <SupportComponent />
       <CommentComponent />
+      <ReviewComponent />
     </div>
   );
 }

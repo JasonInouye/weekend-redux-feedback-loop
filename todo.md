@@ -17,14 +17,14 @@
     - [X] feeling reducer
     - [X] understanding reducer
     - [X] supported reducer
-    - [ ] comments reducer
+    - [X] comments reducer
     - [ ] review reducer
 
 - [ ] create component with wire frame for each page
     - [X] feeling component
     - [X] understanding component
     - [X] supported component
-    - [ ] comments component
+    - [X] comments component
     - [ ] review component
     - [ ] submit feedback component
         - [ ] axios POST
