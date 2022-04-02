@@ -20,7 +20,6 @@ function commentComponent() {
         <form onSubmit={handleComment}>
             <p>Any comments you want to leave?</p>
             <input 
-                required
                 placeholder = "Comment"
                 value = {comment}
                 type = "text"

@@ -19,6 +19,11 @@ function supportComponent () {
     const handleSupport = (event) => {
         event.preventDefault();
         console.log( 'inside of handleSupport component' );
+        //Validate value is not empty before dispatching
+        if ( support == ''){
+            alert('A value must be selected');
+            return false
+        }
         dispatch({ type: 'SET_SUPPORT', payload: support });
         setSupport('');
     }

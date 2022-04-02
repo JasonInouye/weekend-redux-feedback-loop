@@ -19,12 +19,17 @@ function FeelingComponent() {
     const handleFeeling = (event) => {
         event.preventDefault();
         console.log( 'Does this get logged' );
+        //Validate value is not empty before dispatching
+        if ( feeling == ''){
+            alert('A value must be selected');
+            return false
+        }
         dispatch({ type: 'SET_FEELING', payload: feeling });
         setFeeling('');
     };
 
     return (
-        <form onSubmit={handleFeeling}>
+        <form name="feelingForm" onSubmit={handleFeeling}>
             <p>How are you feeling today?</p>
             {/*<input
                 required
