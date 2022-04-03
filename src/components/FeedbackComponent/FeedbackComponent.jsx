@@ -15,7 +15,7 @@ import {makeStyles} from '@material-ui/styles'
 
 
 
-function FeedbackComponent({ getFeedback }) {
+function FeedbackComponent() {
     const feedbackList = useSelector(store => store.feedbackList);
     const history = useHistory();
     const dispatch = useDispatch();
@@ -55,7 +55,7 @@ function FeedbackComponent({ getFeedback }) {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Button type="submit" variant="contained" color="primary" size="small" onClick={handleHome}>Home</Button>
+            <Button type="submit" variant="contained" color="primary" size="large" onClick={handleHome}>Home</Button>
         </>
     )
 }

@@ -11,6 +11,7 @@ import SupportComponent from '../SupportComponent/SupportComponent';
 import CommentComponent from '../CommentComponent/CommentComponent';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
 import FeedbackComponent from '../FeedbackComponent/FeedbackComponent';
+import ThanksComponent from '../ThanksComponent/ThanksComponent'
 import { Typography } from '@material-ui/core';
 
 import { useEffect } from 'react';
@@ -66,6 +67,9 @@ function App() {
           </Route>
           <Route path="/comment">
             <CommentComponent />
+          </Route>
+          <Route path="/thanks">
+            <ThanksComponent />
           </Route>
           <Route path="/review">
             <ReviewComponent 

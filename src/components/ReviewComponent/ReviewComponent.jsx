@@ -32,7 +32,7 @@ function reviewFeedback({getFeedback}) {
             console.log(err);
         })
         // clear feedback data from store after sending to database
-        history.push('/');
+        history.push('/thanks');
         dispatch({ type: 'CLEAR_FEEDBACK_DATA' });
     }
 
@@ -58,10 +58,6 @@ function reviewFeedback({getFeedback}) {
         history.push('/comment');
     }
 
-    const handleAdmin = () => {
-        history.push('/admin')
-    }
-
     return (
         <div>
             <Typography
@@ -79,10 +75,8 @@ function reviewFeedback({getFeedback}) {
                 <p>Support: {support}</p><Button type="submit" variant="contained" color="default" size="small" onClick={handleEditSupport}>Edit</Button>
                 <p>Comments: {comment}</p><Button type="submit" variant="contained" color="default" size="small" onClick={handleEditComment}>Edit</Button>
             </Typography>
-
             <br />
             <Button type="submit" variant="contained" color="primary" size="large" onClick={handleSubmit} endIcon={<SendIcon />}>Submit</Button>
-            <Button type="submit" variant="contained" color="primary" size="large" onClick={handleAdmin} endIcon={<SendIcon />}>Admin</Button>
         </div>
     )
 }
