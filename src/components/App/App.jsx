@@ -8,14 +8,23 @@ import UnderComponent from '../UnderComponent/UnderComponent';
 import SupportComponent from '../SupportComponent/SupportComponent';
 import CommentComponent from '../CommentComponent/CommentComponent';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
+import { Typography } from '@material-ui/core';
 
 function App() {
   return (
     <Router>
       <div className='App'>
         <header className='App-header'>
-          <h1 className='App-title'>Feedback!</h1>
-          <h4>Don't forget it!</h4>
+          <Typography
+            variant="h1"
+          >
+            Feedback!
+          </Typography>
+          <Typography
+            variant="h3"
+          >
+            Don't forget it!
+          </Typography>
         </header>
         <Route path="/" exact>
           <FeelingComponent />

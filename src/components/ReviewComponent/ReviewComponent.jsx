@@ -2,10 +2,12 @@ import axios from 'axios';
 import { useState } from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import SendIcon from '@material-ui/icons/Send';
 
 function reviewFeedback() {
-    console.log('inside of reviewFeedback');
-
+    //console.log('inside of reviewFeedback');
     const history = useHistory();
     const dispatch = useDispatch();
     const [edit, setEdit] = useState('');
@@ -17,8 +19,7 @@ function reviewFeedback() {
     const comment = useSelector(store => store.commentReducer);
 
     const handleSubmit = () => {
-        console.log('inside of handleSubmit', feeling, under, support, comment);
-
+        //console.log('inside of handleSubmit', feeling, under, support, comment);
         axios.post('/api/feedback', {
             feeling: feeling,
             understanding: under,
@@ -36,34 +37,46 @@ function reviewFeedback() {
 
     // button could pass a value to run a switch on history.push?
     const handleEditFeeling = () => {
-        console.log('clicked inside of edit');
+        //console.log('clicked inside of edit');
         dispatch({ type: 'EDIT_RESPONSES' });
         history.push('/');
     }
     const handleEditUnder = () => {
-        console.log('clicked inside of edit');
+        //console.log('clicked inside of edit');
         dispatch({ type: 'EDIT_RESPONSES' });
         history.push('/understanding');
     }
     const handleEditSupport = () => {
-        console.log('clicked inside of edit');
+        //console.log('clicked inside of edit');
         dispatch({ type: 'EDIT_RESPONSES' });
         history.push('/support');
     }
     const handleEditComment = () => {
-        console.log('clicked inside of edit');
+        //console.log('clicked inside of edit');
         dispatch({ type: 'EDIT_RESPONSES' });
         history.push('/comment');
     }
 
     return (
         <div>
-            <h3>Review your feedback</h3>
-            <p>Feelings: {feeling}</p><button onClick={handleEditFeeling}>Edit</button>
-            <p>Understanding: {under}</p><button onClick={handleEditUnder}>Edit</button>
-            <p>Support: {support}</p><button onClick={handleEditSupport}>Edit</button>
-            <p>Comments: {comment}</p><button onClick={handleEditComment}>Edit</button>
-            <button onClick={handleSubmit}>Submit</button>
+            <Typography
+                variant="h4"
+            >
+                Review your feedback
+            </Typography>
+            <Typography
+                variant="h5"
+                align="center"
+                gutterBottom
+            >
+                <p>Feelings: {feeling}</p><Button type="submit" variant="contained" color="default" size="small" onClick={handleEditFeeling}>Edit</Button>
+                <p>Understanding: {under}</p><Button type="submit" variant="contained" color="default" size="small" onClick={handleEditUnder}>Edit</Button>
+                <p>Support: {support}</p><Button type="submit" variant="contained" color="default" size="small" onClick={handleEditSupport}>Edit</Button>
+                <p>Comments: {comment}</p><Button type="submit" variant="contained" color="default" size="small" onClick={handleEditComment}>Edit</Button>
+            </Typography>
+
+            <br />
+            <Button type="submit" variant="contained" color="primary" size="small" onClick={handleSubmit} endIcon={<SendIcon />}>Submit</Button>
         </div>
     )
 }

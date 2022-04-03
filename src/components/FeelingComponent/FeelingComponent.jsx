@@ -1,6 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
+import  Button from '@material-ui/core/Button';
+
 
 function FeelingComponent() {
     //console.log('inside of FeelingComponent');
@@ -34,7 +37,13 @@ function FeelingComponent() {
 
     return (
         <form name="feelingForm" onSubmit={handleFeeling}>
-            <p>How are you feeling today?</p>
+            <Typography 
+                variant="h3"
+                align="center"
+                gutterBottom
+            >
+                How are you feeling today?
+            </Typography>
             {/*<input
                 required
                 placeholder = "Feeling"
@@ -79,7 +88,8 @@ function FeelingComponent() {
                 onChange={handleChange}
             />
             <label htmlFor="feeling">Great!</label>
-            <button type="submit">Next</button>
+            <br />
+            <Button type="submit" variant="contained" color="primary" size="small">Next</Button>
         </form>
     )
 }

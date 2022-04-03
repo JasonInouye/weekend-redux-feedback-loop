@@ -1,13 +1,23 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { TextField, Typography } from '@material-ui/core';
+import  Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core';
 
 function commentComponent() {
-    console.log('inside of commentComponent');
-
+    //console.log('inside of commentComponent');
     const history = useHistory();
     const dispatch = useDispatch();
     const [comment, setComment] = useState('');
+
+    const useStyles = makeStyles({
+        field: {
+            marginTop: 20,
+            marginBottom: 20,
+            display: 'block'
+        }
+    })
 
     const handleComment = () => {
         event.preventDefault();
@@ -19,14 +29,24 @@ function commentComponent() {
 
     return (
         <form onSubmit={handleComment}>
-            <p>Any comments you want to leave?</p>
-            <input
-                placeholder="Comment"
-                value={comment}
-                type="text"
+            <Typography 
+                variant="h3"
+                align="center"
+                gutterBottom
+            >
+                Any comments you want to leave?
+            </Typography>
+            
+            <TextField
                 onChange={(event) => setComment(event.target.value)}
+                label="Comments"
+                variant="outlined"
+                multiline
+                rows={3}
+                mediumwidth
             />
-            <button type="submit">Next</button>
+            <br />
+            <Button type="submit" variant="contained" color="primary" size="small" padding="120">Next</Button>
         </form>
     )
 }

@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 
 function supportComponent() {
     console.log('inside of supportComponent');
@@ -32,14 +34,13 @@ function supportComponent() {
 
     return (
         <form onSubmit={handleSupport}>
-            <p>How well are you being supported?</p>
-            {/* <input
-                required
-                placeholder = "Support"
-                value = { support }
-                type = "text"
-                onChange = {(event) => setSupport(event.target.value)}
-            /> */}
+            <Typography
+                variant="h3"
+                align="center"
+                gutterBottom
+            >
+                <p>How well are you being supported?</p>
+            </Typography>
             <label htmlFor="support">Not Supported</label>
             <input type="radio"
                 name="chooseSupport"
@@ -77,7 +78,8 @@ function supportComponent() {
                 onChange={handleChange}
             />
             <label htmlFor="support">Well Supported</label>
-            <button type="submit">Next</button>
+            <br />
+            <Button type="submit" variant="contained" color="primary" size="small">Next</Button>
         </form>
     )
 }

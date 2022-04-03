@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
+import  Button from '@material-ui/core/Button';
 
 function underComponent() {
     //console.log( 'inside of underComponent' );
@@ -32,14 +34,13 @@ function underComponent() {
 
     return (
         <form onSubmit={handleUnder}>
-            <p>How well are you understanding the talent?</p>
-            {/* <input
-                required
-                placeholder = "Understanding"
-                value = {under}
-                type = "text"
-                onChange = {(event) => setUnder(event.target.value)}
-            /> */}
+            <Typography 
+                variant="h3"
+                align="center"
+                gutterBottom
+            >
+                How well are you understanding the talent?
+            </Typography>
             <label htmlFor="support">Don't Understand</label>
             <input type="radio"
                 name="chooseUnderstanding"
@@ -77,7 +78,8 @@ function underComponent() {
                 onChange={handleChange}
             />
             <label htmlFor="under">Fully Understand</label>
-            <button type="submit">Next</button>
+            <br />
+            <Button type="submit" variant="contained" color="primary" size="small">Next</Button>
         </form>
     )
 }
