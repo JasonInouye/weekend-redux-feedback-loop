@@ -24,6 +24,7 @@ function underComponent () {
             alert('A value must be selected');
             return false
         }
+        history.push('/support');
         dispatch({ type: 'SET_UNDER', payload: under})
         setUnder('');
     }

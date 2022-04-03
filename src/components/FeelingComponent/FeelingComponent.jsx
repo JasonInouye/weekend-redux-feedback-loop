@@ -24,6 +24,7 @@ function FeelingComponent() {
             alert('A value must be selected');
             return false
         }
+        history.push('/understanding');
         dispatch({ type: 'SET_FEELING', payload: feeling });
         setFeeling('');
     };

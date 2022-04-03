@@ -34,8 +34,8 @@
     - [X] update server.js with POST router
 
 - [X] change inputs to radio buttons
-    - [ ] add validation logic to all inputs
-    - [ ] comments does not need validation
+    - [X] add validation logic to all inputs
+    - [X] comments does not need validation
 
 - [ ] add navigation routers
 

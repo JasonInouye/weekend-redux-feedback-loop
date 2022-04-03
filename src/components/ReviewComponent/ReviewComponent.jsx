@@ -28,6 +28,7 @@ function reviewFeedback () {
             console.log( err );
         })
         // clear feedback data from store after sending to database
+        history.push('/');
         dispatch({ type: 'CLEAR_FEEDBACK_DATA' });
     }
 

@@ -24,6 +24,7 @@ function supportComponent () {
             alert('A value must be selected');
             return false
         }
+        history.push('/comment');
         dispatch({ type: 'SET_SUPPORT', payload: support });
         setSupport('');
     }
