@@ -57,6 +57,10 @@ function reviewFeedback() {
         history.push('/comment');
     }
 
+    const handleAdmin = () => {
+        history.push('/admin')
+    }
+
     return (
         <div>
             <Typography
@@ -77,6 +81,7 @@ function reviewFeedback() {
 
             <br />
             <Button type="submit" variant="contained" color="primary" size="large" onClick={handleSubmit} endIcon={<SendIcon />}>Submit</Button>
+            <Button type="submit" variant="contained" color="primary" size="large" onClick={handleAdmin} endIcon={<SendIcon />}>Admin</Button>
         </div>
     )
 }
