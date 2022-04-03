@@ -43,7 +43,7 @@
 #### Stretch
 
 - [X] allow user to edit the review component
-- [ ] styling using Material-UI
+- [X] styling using Material-UI
 - [ ] admin review all feedback
     - [ ] will need new route /admin
     - [ ] delete feedback

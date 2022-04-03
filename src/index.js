@@ -53,6 +53,8 @@ const commentReducer = (state = '', action) => {
 const editReducer = (state = '', action) => {
     if (action.type === 'EDIT_RESPONSES') {
         return true;
+    } else if ( action.type === 'CLEAR_FEEDBACK_DATA'){
+        return false;
     }
     return state;
 }

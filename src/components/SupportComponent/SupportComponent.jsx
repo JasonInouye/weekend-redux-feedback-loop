@@ -39,7 +39,7 @@ function supportComponent() {
                 align="center"
                 gutterBottom
             >
-                <p>How well are you being supported?</p>
+                How well are you being supported?
             </Typography>
             <label htmlFor="support">Not Supported</label>
             <input type="radio"

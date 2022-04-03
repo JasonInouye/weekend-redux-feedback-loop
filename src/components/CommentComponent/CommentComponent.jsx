@@ -2,8 +2,9 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { TextField, Typography } from '@material-ui/core';
-import  Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 
 function commentComponent() {
     //console.log('inside of commentComponent');
@@ -28,26 +29,28 @@ function commentComponent() {
     }
 
     return (
-        <form onSubmit={handleComment}>
-            <Typography 
-                variant="h3"
-                align="center"
-                gutterBottom
-            >
-                Any comments you want to leave?
-            </Typography>
-            
-            <TextField
-                onChange={(event) => setComment(event.target.value)}
-                label="Comments"
-                variant="outlined"
-                multiline
-                rows={3}
-                mediumwidth
-            />
-            <br />
-            <Button type="submit" variant="contained" color="primary" size="small" padding="120">Next</Button>
-        </form>
+        <Container maxWidth="md">
+            <form onSubmit={handleComment}>
+                <Typography
+                    variant="h3"
+                    align="center"
+                    gutterBottom
+                >
+                    Any comments you want to leave?
+                </Typography>
+                <TextField
+                    onChange={(event) => setComment(event.target.value)}
+                    label="Comments"
+                    variant="outlined"
+                    multiline
+                    rows={3}
+                    fullWidth
+                />
+                <br />
+                <Button type="submit" variant="contained" color="primary" size="small">Next</Button>
+            </form>
+        </Container>
+
     )
 }
 

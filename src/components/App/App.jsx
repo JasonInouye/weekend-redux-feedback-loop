@@ -26,21 +26,23 @@ function App() {
             Don't forget it!
           </Typography>
         </header>
-        <Route path="/" exact>
-          <FeelingComponent />
-        </Route>
-        <Route path="/understanding">
-          <UnderComponent />
-        </Route>
-        <Route path="/support">
-          <SupportComponent />
-        </Route>
-        <Route path="/comment">
-          <CommentComponent />
-        </Route>
-        <Route path="/review">
-          <ReviewComponent />
-        </Route>
+        <div className="container">
+          <Route path="/" exact>
+            <FeelingComponent />
+          </Route>
+          <Route path="/understanding">
+            <UnderComponent />
+          </Route>
+          <Route path="/support">
+            <SupportComponent />
+          </Route>
+          <Route path="/comment">
+            <CommentComponent />
+          </Route>
+          <Route path="/review">
+            <ReviewComponent />
+          </Route>
+        </div>
       </div>
     </Router>
   );

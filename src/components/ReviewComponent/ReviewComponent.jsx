@@ -76,7 +76,7 @@ function reviewFeedback() {
             </Typography>
 
             <br />
-            <Button type="submit" variant="contained" color="primary" size="small" onClick={handleSubmit} endIcon={<SendIcon />}>Submit</Button>
+            <Button type="submit" variant="contained" color="primary" size="large" onClick={handleSubmit} endIcon={<SendIcon />}>Submit</Button>
         </div>
     )
 }
