@@ -46,6 +46,8 @@
 - [X] styling using Material-UI
 - [X] admin review all feedback
     - [X] will need new route /admin
+    - [ ] move admin button to nav bar
+    - [ ] create home button to nav bar
     - [ ] delete feedback
     - [X] most recent feedback at top of list. Order by ID
     - [ ] flag feedback?

@@ -1,10 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { TextField, Typography } from '@material-ui/core';
+import { TextField, Typography, makeStyles, Container } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core';
-import { Container } from '@material-ui/core';
+
 
 function commentComponent() {
     //console.log('inside of commentComponent');
