@@ -13,7 +13,7 @@ const feedbackRouter = require( './routes/feedback.router.js');
 app.use('/api/feedback', feedbackRouter );
 
 const adminRouter = require('./routes/admin.router.js');
-app.use('api/admin', adminRouter);
+app.use('/api/admin', adminRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

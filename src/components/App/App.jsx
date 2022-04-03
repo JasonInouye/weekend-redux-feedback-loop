@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import { useDispatch } from 'react-redux';
@@ -9,17 +10,34 @@ import UnderComponent from '../UnderComponent/UnderComponent';
 import SupportComponent from '../SupportComponent/SupportComponent';
 import CommentComponent from '../CommentComponent/CommentComponent';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
-import AdminComponent from '../AdminComponent/AdminComponent';
+import FeedbackComponent from '../FeedbackComponent/FeedbackComponent';
 import { Typography } from '@material-ui/core';
-import axios from 'axios';
+
+import { useEffect } from 'react';
 
 function App() {
 
-  const dispatch = useDisoatch();
+  const dispatch = useDispatch();
 
   const getFeedback = () => {
-    axios.
+    axios.get('/api/admin')
+    .then(response => {
+      console.log(response.data);
+      dispatch({ type: 'SET_FEEDBACK_LIST', payload: response.data })
+    })
+    .catch(err => {
+      console.log( 'error in getting feedback', err);
+    })
   };
+
+  useEffect(() => {
+    console.log('in useEffect');
+    getFeedback();
+  }, []);
+
+
+
+
 
   return (
     <Router>
@@ -53,7 +71,7 @@ function App() {
             <ReviewComponent />
           </Route>
           <Route path="/admin">
-            <AdminComponent />
+            <FeedbackComponent />
           </Route>
         </div>
       </div>

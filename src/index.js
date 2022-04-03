@@ -59,6 +59,14 @@ const editReducer = (state = '', action) => {
     return state;
 }
 
+const feedbackList = (state = [], action) => {
+    if (action.type === 'SET_FEEDBACK_LIST'){
+        console.log( 'reducer data for feedbackList', action.payload );
+        return action.payload;
+    }
+    return state;
+}
+
 // STORE
 // reducers are comma delimited 
 // add logger middleware to store as well
@@ -69,6 +77,7 @@ const reduxStore = createStore(
         supportReducer,
         commentReducer,
         editReducer,
+        feedbackList,
     }),
     applyMiddleware(logger)
 )
