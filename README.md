@@ -8,8 +8,8 @@ This application provides an administrator to send out surveys to customers, emp
 
 ## Here is an example of the photo album. 
 
-![Sample of one of the questions](https://imgur.com/tIRkGIW)
-![What the admin data looks like](https://imgur.com/d9RhVq4)
+![Sample of one of the questions](https://i.imgur.com/tIRkGIW.png)
+![What the admin data looks like](https://i.imgur.com/d9RhVq4.png)
 
 ## Usage
 
