@@ -37,12 +37,12 @@
     - [X] add validation logic to all inputs
     - [X] comments does not need validation
 
-- [ ] add navigation routers
+- [X] add navigation routers
 
 
 #### Stretch
 
-- [ ] allow user to edit the review component
+- [X] allow user to edit the review component
 - [ ] styling using Material-UI
 - [ ] admin review all feedback
     - [ ] will need new route /admin
