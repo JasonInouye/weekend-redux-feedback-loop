@@ -4,9 +4,9 @@ const pool = require('../modules/pool.js');
 
 
 router.get('/', (req,res) => {
-    console.log( 'inside of GET' );
+    //console.log( 'inside of GET' );
     const sqlText = `SELECT * FROM "feedback"
-                    ORDER BY id;`;
+                    ORDER BY id DESC;`;
     pool.query(sqlText)
         .then((result) => {
             console.log( 'Inside oF GET');

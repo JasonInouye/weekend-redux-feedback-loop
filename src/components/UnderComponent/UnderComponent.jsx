@@ -21,7 +21,7 @@ function underComponent() {
 
     const handleUnder = (event) => {
         event.preventDefault();
-        console.log('inside of handleUnder');
+        //console.log('inside of handleUnder');
         //Validate value is not empty before dispatching
         if (under == '') {
             alert('A value must be selected');

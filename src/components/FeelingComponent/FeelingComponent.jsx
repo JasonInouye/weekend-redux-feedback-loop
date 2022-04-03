@@ -24,7 +24,7 @@ function FeelingComponent() {
 
     const handleFeeling = (event) => {
         event.preventDefault();
-        console.log('Does this get logged');
+        //console.log('Does this get logged');
         //Validate value is not empty before dispatching
         if (feeling == '') {
             alert('A value must be selected');

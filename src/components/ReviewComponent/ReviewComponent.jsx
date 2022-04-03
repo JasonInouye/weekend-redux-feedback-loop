@@ -6,7 +6,7 @@ import { Typography } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import SendIcon from '@material-ui/icons/Send';
 
-function reviewFeedback() {
+function reviewFeedback({getFeedback}) {
     //console.log('inside of reviewFeedback');
     const history = useHistory();
     const dispatch = useDispatch();
@@ -26,7 +26,8 @@ function reviewFeedback() {
             support: support,
             comments: comment
         }).then(response => {
-            console.log('feedback submitted');
+            //console.log('feedback submitted');
+            getFeedback();
         }).catch(err => {
             console.log(err);
         })

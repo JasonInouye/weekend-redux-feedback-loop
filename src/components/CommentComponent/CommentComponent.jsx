@@ -22,7 +22,7 @@ function commentComponent() {
 
     const handleComment = () => {
         event.preventDefault();
-        console.log('inside handleComment');
+        //console.log('inside handleComment');
         history.push('/review');
         dispatch({ type: 'SET_COMMENT', payload: comment });
         setComment('');

@@ -44,10 +44,10 @@
 
 - [X] allow user to edit the review component
 - [X] styling using Material-UI
-- [ ] admin review all feedback
-    - [ ] will need new route /admin
+- [X] admin review all feedback
+    - [X] will need new route /admin
     - [ ] delete feedback
-    - [ ] most recent feedback at top of list. Order by ID
+    - [X] most recent feedback at top of list. Order by ID
     - [ ] flag feedback?
 
 - [ ] deploy to HeroKu

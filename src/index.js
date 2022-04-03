@@ -22,7 +22,7 @@ const feelingReducer = (state = '', action) => {
 
 const underReducer = (state = '', action) => {
     if (action.type === 'SET_UNDER') {
-        console.log('inside of SET_UNDER', action.payload);
+        //console.log('inside of SET_UNDER', action.payload);
         return action.payload;
     } else if (action.type === 'CLEAR_FEEDBACK_DATA') {
         return '';
@@ -32,7 +32,7 @@ const underReducer = (state = '', action) => {
 
 const supportReducer = (state = '', action) => {
     if (action.type === 'SET_SUPPORT') {
-        console.log('inside of SET_SUPPORT', action.payload);
+        //console.log('inside of SET_SUPPORT', action.payload);
         return action.payload;
     } else if (action.type === 'CLEAR_FEEDBACK_DATA') {
         return '';
@@ -42,7 +42,7 @@ const supportReducer = (state = '', action) => {
 
 const commentReducer = (state = '', action) => {
     if (action.type === 'SET_COMMENT') {
-        console.log('inside of SET_COMMENT', action.payload);
+        //console.log('inside of SET_COMMENT', action.payload);
         return action.payload;
     } else if (action.type === 'CLEAR_FEEDBACK_DATA') {
         return '';
@@ -61,7 +61,7 @@ const editReducer = (state = '', action) => {
 
 const feedbackList = (state = [], action) => {
     if (action.type === 'SET_FEEDBACK_LIST'){
-        console.log( 'reducer data for feedbackList', action.payload );
+        //console.log( 'reducer data for feedbackList', action.payload );
         return action.payload;
     }
     return state;

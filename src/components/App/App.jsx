@@ -22,7 +22,7 @@ function App() {
   const getFeedback = () => {
     axios.get('/api/admin')
     .then(response => {
-      console.log(response.data);
+      //console.log(response.data);
       dispatch({ type: 'SET_FEEDBACK_LIST', payload: response.data })
     })
     .catch(err => {
@@ -31,7 +31,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.log('in useEffect');
+    //console.log('in useEffect');
     getFeedback();
   }, []);
 
@@ -68,7 +68,9 @@ function App() {
             <CommentComponent />
           </Route>
           <Route path="/review">
-            <ReviewComponent />
+            <ReviewComponent 
+              getFeedback={getFeedback}
+            />
           </Route>
           <Route path="/admin">
             <FeedbackComponent />
